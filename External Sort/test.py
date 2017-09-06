@@ -1,17 +1,26 @@
-import time
 import itertools
+import sys
+x = [1,2,3,4,5]
+y = iter(x)
 
-start_time = time.time()
-number_of_step = 100000000
+file_object = open('part_1.txt','rb')
+print sys.getsizeof(file_object)
 
-for i in itertools.count():
-    if i> number_of_step : break
+# while True:
+#     a =  file_object.readline()
+#     if not a:
+#         break
+#     print a
+#     print '-'
 
-print("--- %s seconds ---" % (time.time() - start_time))
 
-start_time = time.time()
-i = 0
-while i <= number_of_step:
-    i+=1
+# for i in itertools.count():
+#     chunk = file_object.readlines(5)
+#     if not chunk:
+#         break
+#     print chunk
+#     print "--"
 
-print("--- %s seconds ---" % (time.time() - start_time))
+
+# for a in list(itertools.islice(gengen(),10)):
+#     print a
