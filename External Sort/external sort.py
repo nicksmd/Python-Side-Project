@@ -68,7 +68,7 @@ class ExternalSort(object):
 
 if __name__ == "__main__":
     process = psutil.Process(os.getpid())
-
+    # http://fa.bianp.net/blog/2013/different-ways-to-get-memory-consumption-or-lessons-learned-from-memory_profiler/
     inputFile = "input.txt"
     outputFile = "output.txt"
     # byte
@@ -79,7 +79,3 @@ if __name__ == "__main__":
     sorter.merge()
 
     print(process.memory_info().rss/1./1024/1024)
-
-
-
-
